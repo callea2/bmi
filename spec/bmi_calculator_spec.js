@@ -7,7 +7,7 @@ describe("BMICalculator", function(){
     calculator = new BMICalculator();
   });
 
-  it("calculates BMI for a person using metric method", function() {
+  it("calculates BMI using metric method", function() {
     calculator.metric_bmi(person);
     expect(person.bmiValue).toEqual(26.01);
   });
