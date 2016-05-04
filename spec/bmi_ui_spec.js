@@ -14,7 +14,7 @@ describe('BMI_UI - index.html', function() {
   });
 
   it("displays BMI Message", function() {
-    expect($('#display_message').text()).toBe('and you are Overweight');
+    expect($('#display_message').text()).toBe("and your status is 'Overweight'");
   });
 
 });
