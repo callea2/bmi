@@ -6,7 +6,8 @@ $(document).ready(function () {
     if($('#myonoffswitch:checkbox:checked').length > 0) {
       //use imperial method
       person.calculate_imperial_bmi();
-    } else {
+    }
+    else {
       //use metric method
       person.calculate_metric_bmi();
     }
