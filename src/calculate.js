@@ -4,11 +4,9 @@ $(document).ready(function () {
     var h = parseFloat($('#height').val());
     var person = new Person({weight: w, height: h});
     if($('#myonoffswitch:checkbox:checked').length > 0) {
-      //use imperial method
       person.calculate_imperial_bmi();
     }
     else {
-      //use metric method
       person.calculate_metric_bmi();
     }
 

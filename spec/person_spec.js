@@ -3,6 +3,7 @@ describe("Metric", function() {
 
   beforeEach(function() {
     person_metric = new Person({weight: 90, height: 186});
+    person_metric.calculate_metric_bmi();
   });
 
   it("should have weight of 90", function() {
@@ -14,12 +15,10 @@ describe("Metric", function() {
   });
 
   it("should calculate BMI value", function(){
-    person_metric.calculate_metric_bmi();
     expect(person_metric.bmiValue).toEqual(26.01)
   });
 
   it("should have a BMI Message", function(){
-    person_metric.calculate_metric_bmi();
     expect(person_metric.bmiMessage).toEqual("'Overweight'")
   });
 });
@@ -29,6 +28,7 @@ describe("Imperial", function() {
 
   beforeEach(function() {
     person_imperial = new Person({weight: 190, height: 73});
+    person_imperial.calculate_imperial_bmi();
   });
 
   it("should have weight of 190", function() {
@@ -40,12 +40,10 @@ describe("Imperial", function() {
   });
 
   it("should calculate BMI value", function(){
-    person_imperial.calculate_imperial_bmi();
     expect(person_imperial.bmiValue).toEqual(25.06)
   });
 
   it("should have a BMI Message", function(){
-    person_imperial.calculate_imperial_bmi();
     expect(person_imperial.bmiMessage).toEqual("'Overweight'")
   });
 });
