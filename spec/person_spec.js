@@ -1,51 +1,51 @@
-describe("Person", function() {
-  var person;
+describe("Metric", function() {
+  var person_metric;
 
   beforeEach(function() {
-    person = new Person({weight: 90, height: 186});
+    person_metric = new Person({weight: 90, height: 186});
   });
 
   it("should have weight of 90", function() {
-    expect(person.weight).toEqual(90);
+    expect(person_metric.weight).toEqual(90);
   });
 
   it("should have height of 186", function() {
-    expect(person.height).toEqual(186);
+    expect(person_metric.height).toEqual(186);
   });
 
   it("should calculate BMI value", function(){
-    person.calculate_bmi();
-    expect(person.bmiValue).toEqual(26.01)
+    person_metric.calculate_metric_bmi();
+    expect(person_metric.bmiValue).toEqual(26.01)
   });
 
   it("should have a BMI Message", function(){
-    person.calculate_bmi();
-    expect(person.bmiMessage).toEqual("'Overweight'")
+    person_metric.calculate_metric_bmi();
+    expect(person_metric.bmiMessage).toEqual("'Overweight'")
   });
 });
 
-describe("Person1", function() {
-  var person1;
+describe("Imperial", function() {
+  var person_imperial;
 
   beforeEach(function() {
-    person1 = new Person1({weight: 190, height: 73});
+    person_imperial = new Person({weight: 190, height: 73});
   });
 
   it("should have weight of 190", function() {
-    expect(person1.weight).toEqual(190);
+    expect(person_imperial.weight).toEqual(190);
   });
 
   it("should have height of 73", function() {
-    expect(person1.height).toEqual(73);
+    expect(person_imperial.height).toEqual(73);
   });
 
   it("should calculate BMI value", function(){
-    person1.calculate_bmi();
-    expect(person1.bmiValue).toEqual(25.06)
+    person_imperial.calculate_imperial_bmi();
+    expect(person_imperial.bmiValue).toEqual(25.06)
   });
 
   it("should have a BMI Message", function(){
-    person1.calculate_bmi();
-    expect(person1.bmiMessage).toEqual("'Overweight'")
+    person_imperial.calculate_imperial_bmi();
+    expect(person_imperial.bmiMessage).toEqual("'Overweight'")
   });
 });
