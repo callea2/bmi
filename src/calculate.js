@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  document.getElementById("myonoffswitch").onclick = function() {
+  $getElementById("myonoffswitch").click = function() {
     if (this.checked) {
       $('#calculate').click(function () {
         var w = parseFloat($('#weight').val());
@@ -8,6 +8,7 @@ $(document).ready(function () {
         person1.calculate_bmi();
         $('#display_value').html('Your BMI is ' + person1.bmiValue);
         $('#display_message').html('and your status is '+ person1.bmiMessage);
+      });
     }
     else {
       $('#calculate').click(function () {
@@ -17,6 +18,7 @@ $(document).ready(function () {
         person.calculate_bmi();
         $('#display_value').html('Your BMI is ' + person.bmiValue);
         $('#display_message').html('and your status is '+ person.bmiMessage);
+      });
     }
   };
 });
